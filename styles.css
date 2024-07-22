@@ -1,0 +1,110 @@
+/* Basic reset to ensure consistent styling across browsers */
+body, h1, p, select, input, button, canvas {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full height for the body to center content vertically */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Center content vertically and horizontally */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f6f7f9; /* Light background color */
+}
+
+/* Styling for the container */
+.container {
+    background-color: #0066cc; /* Blue background for the content */
+    border-radius: 8px; /* Rounded corners */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Styling for file input and dropdowns */
+input[type="file"], select {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; /* Set width to 100% to match the container */
+    max-width: 300px; /* Max width for demonstration, adjust as needed */
+}
+
+
+/* Checkbox styling */
+.form-check {
+    margin: 10px 0;
+}
+
+/* Styling for the canvas */
+canvas {
+    border: 1px dotted rgb(239, 229, 229); /* Borde punteado blanco */
+    width: 512px; /* Fixed width for demonstration */
+    height: 512px; /* Fixed height for demonstration */
+    margin: 10px 0;
+}
+
+/* Styling for the button group */
+.button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    width: 75px;
+    height: 75px;
+}
+
+/* Styling for buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Button colors */
+#uploadImageButton {
+    background-color: #007bff; /* Primary blue */
+}
+
+#downloadButton {
+    background-color: #6c757d; /* Light gray */
+}
+
+/* Button hover effects */
+button:hover {
+    opacity: 0.9;
+   
+}
+
+/* Disable state for dropdowns */
+select:disabled {
+    color: #888;
+}
+
+/* Text color adjustment for white text */
+h1, p, .form-check-label {
+    color: white;
+}
+
+/* Styling for the logo */
+.logo {
+    position: absolute;
+    width: 190px;
+    height: 75px;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: #0066cc;
+    border-radius: 5px;
+}
