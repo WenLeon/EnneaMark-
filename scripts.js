@@ -149,8 +149,8 @@ function drawImages() {
     // Dibujar la imagen principal redimensionada
     ctx.drawImage(caraImage, 0, 0, newWidth, newHeight);
 
-    const selloWidth = 100;
-    const selloHeight = 100;
+    const selloWidth = 85;
+    const selloHeight = 85;
     const logoWidth = selloWidth * 2;
     const logoHeight = selloHeight;
 

@@ -1,14 +1,22 @@
 /* Basic reset to ensure consistent styling across browsers */
-body, h1, p, select, input, button, canvas {
+body,
+h1,
+p,
+select,
+input,
+button,
+canvas {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Full height for the body to center content vertically */
-html, body {
+html,
+body {
     height: 100%;
     font-family: Arial, sans-serif;
+    background-color: #0066cc;
 }
 
 /* Center content vertically and horizontally */
@@ -16,27 +24,36 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #f6f7f9; /* Light background color */
+    /* height: 100vh; */
+
+    background-color: #0066cc;
+
 }
 
 /* Styling for the container */
 .container {
-    background-color: #0066cc; /* Blue background for the content */
-    border-radius: 8px; /* Rounded corners */
+    background-color: #0066cc;
+    /* Blue background for the content */
+    /* border-radius: 8px; */
+    /* Rounded corners */
+
     padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    /* Shadow for depth */
 }
 
 /* Styling for file input and dropdowns */
-input[type="file"], select {
+input[type="file"],
+select {
     margin: 10px 0;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    width: 100%; /* Set width to 100% to match the container */
-    max-width: 300px; /* Max width for demonstration, adjust as needed */
+    width: 100%;
+    /* Set width to 100% to match the container */
+    max-width: 300px;
+    /* Max width for demonstration, adjust as needed */
 }
 
 
@@ -47,16 +64,20 @@ input[type="file"], select {
 
 /* Styling for the canvas */
 canvas {
-    border: 1px dotted rgb(239, 229, 229); /* Borde punteado blanco */
-    width: 512px; /* Fixed width for demonstration */
-    height: 512px; /* Fixed height for demonstration */
+    border: 1px dotted rgb(239, 229, 229);
+    /* Borde punteado blanco */
+    width: 512px;
+    /* Fixed width for demonstration */
+    height: 512px;
+    /* Fixed height for demonstration */
     margin: 10px 0;
 }
 
 /* Styling for the button group */
 .button-group {
     display: flex;
-    gap: 10px; /* Space between buttons */
+    gap: 10px;
+    /* Space between buttons */
     width: 75px;
     height: 75px;
 }
@@ -73,17 +94,19 @@ button {
 
 /* Button colors */
 #uploadImageButton {
-    background-color: #007bff; /* Primary blue */
+    background-color: #007bff;
+    /* Primary blue */
 }
 
 #downloadButton {
-    background-color: #6c757d; /* Light gray */
+    background-color: #6c757d;
+    /* Light gray */
 }
 
 /* Button hover effects */
 button:hover {
     opacity: 0.9;
-   
+
 }
 
 /* Disable state for dropdowns */
@@ -92,7 +115,9 @@ select:disabled {
 }
 
 /* Text color adjustment for white text */
-h1, p, .form-check-label {
+h1,
+p,
+.form-check-label {
     color: white;
 }
 
