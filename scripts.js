@@ -136,11 +136,11 @@ selloSelect3.addEventListener('change', handleSelect3Change);
 function drawImages() {
     if (!caraImage) return;
 
-    // Calcular las nuevas dimensiones
+    // Calcular las nuevas dimensiones del canvas
     const originalWidth = caraImage.width;
     const originalHeight = caraImage.height;
-    const newWidth = originalWidth * 1;
-    const newHeight = originalHeight * 1;
+    const newWidth = originalWidth * 1; // Puedes ajustar este valor según tus necesidades
+    const newHeight = originalHeight * 1; // Puedes ajustar este valor según tus necesidades
 
     canvas.width = newWidth;
     canvas.height = newHeight;
@@ -149,14 +149,15 @@ function drawImages() {
     // Dibujar la imagen principal redimensionada
     ctx.drawImage(caraImage, 0, 0, newWidth, newHeight);
 
-    const selloWidth = 85;
-    const selloHeight = 85;
-    const logoWidth = selloWidth * 2;
-    const logoHeight = selloHeight;
+    // Dimensiones específicas para el logo y los sellos
+    const logoWidth = 190; // Ancho del logo
+    const logoHeight = 75; // Alto del logo
+    const selloWidth = 75; // Ancho del sello
+    const selloHeight = 75; // Alto del sello
 
-    let xPos = 18;
+    let xPos = 10;
 
-    // Dibujar la imagen adicional si está seleccionada
+    // Dibujar la imagen adicional (logo) si está seleccionada
     if (extraImageCheckbox.checked) {
         ctx.drawImage(extraImage, xPos, newHeight - logoHeight - 20, logoWidth, logoHeight);
         xPos += logoWidth + 10;
@@ -171,14 +172,16 @@ function drawImages() {
     // Dibujar la segunda imagen de sello
     if (selloImage2) {
         ctx.drawImage(selloImage2, xPos, newHeight - selloHeight - 20, selloWidth, selloHeight);
-        xPos += selloWidth + 18;
+        xPos += selloWidth + 10;
     }
 
     // Dibujar la tercera imagen de sello
     if (selloImage3) {
         ctx.drawImage(selloImage3, xPos, newHeight - selloHeight - 20, selloWidth, selloHeight);
+       
     }
 }
+
 
 // Descargar la imagen
 downloadButton.addEventListener('click', function() {

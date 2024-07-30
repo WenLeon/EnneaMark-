@@ -24,22 +24,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; */
-
     background-color: #0066cc;
-
 }
 
 /* Styling for the container */
 .container {
     background-color: #0066cc;
-    /* Blue background for the content */
-    /* border-radius: 8px; */
-    /* Rounded corners */
-
     padding: 2rem;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    /* Shadow for depth */
 }
 
 /* Styling for file input and dropdowns */
@@ -51,11 +42,8 @@ select {
     border-radius: 4px;
     font-size: 16px;
     width: 100%;
-    /* Set width to 100% to match the container */
     max-width: 300px;
-    /* Max width for demonstration, adjust as needed */
 }
-
 
 /* Checkbox styling */
 .form-check {
@@ -65,21 +53,16 @@ select {
 /* Styling for the canvas */
 canvas {
     border: 1px dotted rgb(239, 229, 229);
-    /* Borde punteado blanco */
     width: 512px;
-    /* Fixed width for demonstration */
     height: 512px;
-    /* Fixed height for demonstration */
     margin: 10px 0;
 }
 
 /* Styling for the button group */
 .button-group {
     display: flex;
-    gap: 10px;
-    /* Space between buttons */
-    width: 75px;
-    height: 75px;
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center the buttons */
 }
 
 /* Styling for buttons */
@@ -90,23 +73,22 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    flex: 1; /* Ensure buttons take equal space */
+    max-width: 100px; /* Max width for consistency */
 }
 
 /* Button colors */
 #uploadImageButton {
     background-color: #007bff;
-    /* Primary blue */
 }
 
 #downloadButton {
     background-color: #6c757d;
-    /* Light gray */
 }
 
 /* Button hover effects */
 button:hover {
     opacity: 0.9;
-
 }
 
 /* Disable state for dropdowns */
@@ -126,10 +108,8 @@ p,
     position: absolute;
     width: 190px;
     height: 75px;
-    top: 10px;
     left: 10px;
     color: white;
     font-size: 1.5rem;
     background-color: #0066cc;
-    border-radius: 5px;
 }
