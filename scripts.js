@@ -134,21 +134,28 @@ selloSelect2.addEventListener('change', handleSelect2Change);
 selloSelect3.addEventListener('change', handleSelect3Change);
 
 // Dibujar imágenes en el canvas
+// Definir un tamaño fijo para el canvas
+const canvasWidth = 512; // Tamaño fijo para el canvas
+const canvasHeight = 512; // Tamaño fijo para el canvas
+
+// Dibujar imágenes en el canvas
 function drawImages() {
     if (!caraImage) return;
 
-    // Calcular las nuevas dimensiones del canvas
-    const originalWidth = caraImage.width;
-    const originalHeight = caraImage.height;
-    const newWidth = originalWidth * 1; // Puedes ajustar este valor según tus necesidades
-    const newHeight = originalHeight * 1; // Puedes ajustar este valor según tus necesidades
-
-    canvas.width = newWidth;
-    canvas.height = newHeight;
+    // Establecer el tamaño del canvas
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Calcular la escala para ajustar la imagen principal al tamaño del canvas
+    const scale = Math.min(canvasWidth / caraImage.width, canvasHeight / caraImage.height);
+    const newWidth = caraImage.width * scale;
+    const newHeight = caraImage.height * scale;
+    const xOffset = (canvasWidth - newWidth) / 2;
+    const yOffset = (canvasHeight - newHeight) / 2;
+
     // Dibujar la imagen principal redimensionada
-    ctx.drawImage(caraImage, 0, 0, newWidth, newHeight);
+    ctx.drawImage(caraImage, xOffset, yOffset, newWidth, newHeight);
 
     // Dimensiones específicas para el logo y los sellos
     const logoWidth = 190; // Ancho del logo
@@ -160,28 +167,28 @@ function drawImages() {
 
     // Dibujar la imagen adicional (logo) si está seleccionada
     if (extraImageCheckbox.checked) {
-        ctx.drawImage(extraImage, xPos, newHeight - logoHeight - 20, logoWidth, logoHeight);
+        ctx.drawImage(extraImage, xPos, canvasHeight - logoHeight - 20, logoWidth, logoHeight);
         xPos += logoWidth + 10;
     }
 
     // Dibujar la primera imagen de sello
     if (selloImage1) {
-        ctx.drawImage(selloImage1, xPos, newHeight - selloHeight - 20, selloWidth, selloHeight);
+        ctx.drawImage(selloImage1, xPos, canvasHeight - selloHeight - 20, selloWidth, selloHeight);
         xPos += selloWidth + 10;
     }
 
     // Dibujar la segunda imagen de sello
     if (selloImage2) {
-        ctx.drawImage(selloImage2, xPos, newHeight - selloHeight - 20, selloWidth, selloHeight);
+        ctx.drawImage(selloImage2, xPos, canvasHeight - selloHeight - 20, selloWidth, selloHeight);
         xPos += selloWidth + 10;
     }
 
     // Dibujar la tercera imagen de sello
     if (selloImage3) {
-        ctx.drawImage(selloImage3, xPos, newHeight - selloHeight - 20, selloWidth, selloHeight);
-       
+        ctx.drawImage(selloImage3, xPos, canvasHeight - selloHeight - 20, selloWidth, selloHeight);
     }
 }
+
 
 
 // Descargar la imagen
