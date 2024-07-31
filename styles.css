@@ -33,7 +33,7 @@ body {
 
 /* Styling for the container */
 .container {
-    background-color: hsla(225, 96%, 49%, 0.788);
+    background-color: rgba(0,67,206,255);
     padding: 2rem;
 }
 
@@ -57,7 +57,7 @@ select {
 
 /* Styling for the canvas */
 canvas {
-    border: 1px dotted rgb(239, 229, 229);
+    border: none;
     width: 512px;
     height: 512px;
     margin: 10px 0;
@@ -118,9 +118,8 @@ p,
 }
 
 .logo {
-    position: fixed; /* El logo se mantendrá fijo en la pantalla */
-    top: 0; /* Alinea el logo con la parte superior de la ventana del navegador */
-    left: 0; /* Alinea el logo con el lado izquierdo de la ventana del navegador */
+    position: absolute;
+    top : 0;
     padding: 10px; /* Agrega espaciado alrededor del logo */
     z-index: 1000; /* Asegura que el logo esté por encima de otros elementos */
     color: white;

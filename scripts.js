@@ -53,22 +53,23 @@ function updateSelloSelects() {
 
     // Actualizar opciones del primer select
     Array.from(selloSelect1.options).forEach(option => {
-        option.disabled = option.value === selectedGroup2 || option.value === selectedGroup3;
+        option.disabled = option.value !== "" && (option.value === selectedGroup2 || option.value === selectedGroup3);
     });
 
     // Actualizar opciones del segundo select
     Array.from(selloSelect2.options).forEach(option => {
-        option.disabled = option.value === selectedGroup1 || option.value === selectedGroup3;
+        option.disabled = option.value !== "" && (option.value === selectedGroup1 || option.value === selectedGroup3);
     });
 
     // Actualizar opciones del tercer select
     Array.from(selloSelect3.options).forEach(option => {
-        option.disabled = option.value === selectedGroup1 || option.value === selectedGroup2;
+        option.disabled = option.value !== "" && (option.value === selectedGroup1 || option.value === selectedGroup2);
     });
 
     // Habilitar o deshabilitar el tercer select
     selloSelect3.disabled = !selloSelect2.value;
 }
+
 
 // Manejar el cambio en el primer select
 function handleSelect1Change() {
